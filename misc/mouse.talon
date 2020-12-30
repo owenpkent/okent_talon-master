@@ -51,11 +51,11 @@ drag:
 	user.mouse_drag()
 	# close the mouse grid
 	user.grid_close()
-wheel down: user.mouse_scroll_down()
+wheel down: mouse_scroll(4000)
 wheel down here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_down()
-wheel tiny [down]: mouse_scroll(20)
+wheel tiny down: mouse_scroll(200)
 wheel tiny [down] here:
     user.mouse_move_center_active_window()
     mouse_scroll(20)
@@ -63,10 +63,10 @@ wheel downer: user.mouse_scroll_down_continuous()
 wheel downer here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_down_continuous()
-wheel up: user.mouse_scroll_up()
+wheel up: mouse_scroll(-4000)
 wheel up here:
  user.mouse_scroll_up()
-wheel tiny up: mouse_scroll(-20)
+wheel up tiny: mouse_scroll(-200)
 wheel tiny up here:
     user.mouse_move_center_active_window()
     mouse_scroll(-20)

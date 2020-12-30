@@ -2,7 +2,7 @@ mode: dictation
 -
 #everything here should call auto_insert to preserve the state to correctly auto-capitalize/auto-space.
 <user.text>: auto_insert(text)
-enter: auto_insert("new-line")
+(enter | new line): auto_insert("new-line")
 period: auto_insert(".")
 (comma | kama): 
     auto_insert(",")
@@ -10,6 +10,10 @@ period: auto_insert(".")
 (bang | exclamation [mark]): auto_insert("!")
 dash: auto_insert("-")
 colon: auto_insert(":")
+#space: auto_insert(key(space))
+#(wipe | backspace): auto_insert(key(backspace))
+
+
 # user.dictate no longer exists, so I'm not sure what this was supposed to do.
 #space: user.dictate(" ")
 (semi colon | semicolon): auto_insert(";")
